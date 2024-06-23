@@ -1,0 +1,42 @@
+{
+  "icons": [
+    {
+      "src": "/assets/icons/icon_510x510.56f610194d900b8a383342b1cb3f8647.png",
+      "sizes": "510x510",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/icons/icon_382x382.62ec970f52e29f010e17765917590e6e.png",
+      "sizes": "382x382",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/icons/icon_256x256.873242da1488f53efeaca94de308539e.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/icons/icon_189x189.6e59f941ac9752684f45138d57493b7f.png",
+      "sizes": "189x189",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/icons/icon_126x126.28ccbb9688c849605f806283d5af725e.png",
+      "sizes": "126x126",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/icons/icon_94x94.5b9206ba36b3aec8f34b0924f0141c7e.png",
+      "sizes": "94x94",
+      "type": "image/png"
+    }
+  ],
+  "name": "week-19-Progressive-web-applications-text-editor-main ",
+  "short_name": "Week 19 PWA",
+  "orientation": "portrait",
+  "display": "standalone",
+  "start_url": "/",
+  "description": "Setting jate",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff"
+}

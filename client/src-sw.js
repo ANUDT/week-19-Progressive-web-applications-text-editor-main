@@ -14,7 +14,7 @@ const pageCache = new CacheFirst({
       statuses: [0, 200],
     }),
     new ExpirationPlugin({
-      maxAgeSeconds: 30 * 24 * 60 * 60,
+      maxAgeSeconds: 40 * 14 * 50 * 50,
     }),
   ],
 });
@@ -26,17 +26,6 @@ warmStrategyCache({
 
 registerRoute(({ request }) => request.mode === 'navigate', pageCache);
 
-// self.addEventListener('install', (event) => {
-//   console.log('Installing the Service Worker');
-// });
-
-// self.addEventListener('activate', (event) => {
-//   console.log('Activating the Service Worker');
-// });
-
-// self.addEventListener('fetch', (event) => {
-//   console.log('Fetch intercepted for:', event.request.url);
-// });
 registerRoute(({ request }) => ['style', 'script', 'worker'].includes(request.destination),
 new StaleWhileRevalidate({
   cacheName: 'asset-cache',
