@@ -17,7 +17,7 @@ module.exports = () => {
     plugins: [
       new HtmlWebpackPlugin ({
         template: './index.html',
-        title: 'Title'
+        title: 'setting jate'
       }),
 
       new InjectManifest({
@@ -28,7 +28,7 @@ module.exports = () => {
       new WebpackPwaManifest({
         name: 'week-19-Progressive-web-applications-text-editor-main ',
         short_name: 'Week 19 PWA',
-        description: 'Progressive Web App',
+        description: 'Setting jate',
         background_color: '#ffffff',
         theme_color: '#ffffff',
         start_url: '.',
