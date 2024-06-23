@@ -15,14 +15,14 @@ module.exports = () => {
       path: path.resolve(__dirname, 'dist'),
     },
     plugins: [
-      new HtmlWebpackPlugin ({
+      new HtmlWebpackPlugin({
         template: './index.html',
         title: 'setting jate'
       }),
 
       new InjectManifest({
         swSrc: './scr-sw.js',
-        swDest:'scr-sw.js',
+        swDest: 'scr-sw.js',
       }),
 
       new WebpackPwaManifest({
@@ -31,7 +31,8 @@ module.exports = () => {
         description: 'Setting jate',
         background_color: '#ffffff',
         theme_color: '#ffffff',
-        start_url: '.',
+        start_url: '/',
+        publicPath: '/',
         icons: [
           {
             src: path.resolve('src/images/icon.png'),
@@ -48,7 +49,18 @@ module.exports = () => {
           test: /\.css$/i,
           use: ['style-loader', 'css-loader'],
         },
-      ],
+        {
+          test: /\.m?js$/,
+          exclude: /node_modules/,
+          use: {
+            loader: 'babel-loader',
+            options: {
+              presets: ['@babel/preset-env'],
+              plugins: ['@babel/plugin-proposal-object-rest-spread', '@babel/transform-runtime'],
+            }
+          }
+        }
+      ]
     },
-  };
-};
+}};
+

@@ -26,15 +26,23 @@ warmStrategyCache({
 
 registerRoute(({ request }) => request.mode === 'navigate', pageCache);
 
-self.addEventListener('install', (event) => {
-  console.log('Installing the Service Worker');
-});
+// self.addEventListener('install', (event) => {
+//   console.log('Installing the Service Worker');
+// });
 
-self.addEventListener('activate', (event) => {
-  console.log('Activating the Service Worker');
-});
+// self.addEventListener('activate', (event) => {
+//   console.log('Activating the Service Worker');
+// });
 
-self.addEventListener('fetch', (event) => {
-  console.log('Fetch intercepted for:', event.request.url);
-});
-registerRoute();
+// self.addEventListener('fetch', (event) => {
+//   console.log('Fetch intercepted for:', event.request.url);
+// });
+registerRoute(({ request }) => ['style', 'script', 'worker'].includes(request.destination),
+new StaleWhileRevalidate({
+  cacheName: 'asset-cache',
+  plugins: [
+    new CacheableResponsePlugin({
+      statuses: [0, 200],
+    }),
+  ],
+}));
