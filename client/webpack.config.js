@@ -27,6 +27,22 @@ module.exports = () => {
         swSrc: './scr-sw.js',
         swDest:'scr-sw.js',
       }),
+
+      new WebpackPwaManifest({
+        name: 'week-19-Progressive-web-applications-text-editor-main ',
+        short_name: 'Week 19 PWA',
+        description: 'Progressive Web App',
+        background_color: '#ffffff',
+        theme_color: '#ffffff',
+        start_url: '.',
+        icons: [
+          {
+            src: path.resolve('src/images/icon.png'),
+            sizes: [94, 126, 189, 256, 382, 510],
+            destination: path.join('assets', 'icons')
+          }
+        ]
+      })
     ],
 
     module: {
