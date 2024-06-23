@@ -26,5 +26,15 @@ warmStrategyCache({
 
 registerRoute(({ request }) => request.mode === 'navigate', pageCache);
 
-// TODO: Implement asset caching
+self.addEventListener('install', (event) => {
+  console.log('Installing the Service Worker');
+});
+
+self.addEventListener('activate', (event) => {
+  console.log('Activating the Service Worker');
+});
+
+self.addEventListener('fetch', (event) => {
+  console.log('Fetch intercepted for:', event.request.url);
+});
 registerRoute();
