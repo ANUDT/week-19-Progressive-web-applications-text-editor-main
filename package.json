@@ -1,6 +1,6 @@
 {
   "name": "week-19-Progressive-web-applications-text-editor-main",
-  "version": "1.0.0",
+   "version": "1.0.0",
   "description": "",
   "main": "server.js",
   "scripts": {
