@@ -1,6 +1,6 @@
 {
   "name": "week-19-Progressive-web-applications-text-editor-main",
-   "version": "1.0.0",
+  "version": "1.0.0",
   "description": "",
   "main": "server.js",
   "scripts": {
@@ -16,7 +16,8 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
-    "if-env": "^1.0.4"
+    "if-env": "^1.0.4",
+    "server": "^1.0.39"
   },
   "devDependencies": {
     "@babel/core": "^7.24.7",
